@@ -33,7 +33,7 @@
 
 - name: Add docker apt repo
   apt_repository:
-    repo: 'deb [arch=amd64] https://download.docker.com/linux/{{ ansible_distribution|lower }} {{ host_distribution_release }} stable'
+    repo: 'deb [arch=amd64] https://download.docker.com/linux/{{ ansible_distribution|lower }} {{ host_distribution_release if host_distribution_release is defined else ansible_distribution_release }} stable'
     state: present
     update_cache: yes
 
