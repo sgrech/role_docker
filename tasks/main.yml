@@ -18,8 +18,8 @@
       - curl
       - gnupg-agent
       - software-properties-common
-      - python-pip
-      - python-dev
+      - python3-pip
+      - python3-dev
       - libffi-dev
       - libssl-dev
       - gcc
